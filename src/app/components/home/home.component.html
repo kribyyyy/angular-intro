@@ -1,0 +1,34 @@
+<div class="game-form-container">
+    <div class="game-form-input-container">
+        <label for="gameName">Name:</label>
+        <input type="text" class="game-name" id="gameName" [formControl]="name" [ngClass]="{'invalid-input': name.invalid}"/>
+    </div>
+    <div class="game-form-input-container">
+        <label for="gameGenre">Genre:</label>
+        <input type="text" class="game-genre" id="gameGenre" [formControl]="genre"/>
+    </div>
+    <div class="game-form-input-container">
+        <label for="gamePlayTime">Play Time:</label>
+        <input type="number" class="game-play-time" id="gamePlayTime" [formControl]="playTime"/>
+    </div>
+    <div class="game-form-input-container">
+        <input type="button" class="add-new-button" value="ADD" (click)="addNewGame()" [disabled]="name.invalid" [ngClass]="{'invalid-button': name.invalid}"/>
+    </div>
+</div>
+
+<div class="filters-container">
+    <mat-form-field>
+        <mat-label>Sort</mat-label>
+        <mat-select panelClass="sort-select" [(ngModel)]="sort" (selectionChange)="searchGames(sort)">
+            <mat-option value="name">Name</mat-option>
+            <mat-option value="-released">Released</mat-option>
+            <mat-option value="-added">Added</mat-option>
+            <mat-option value="-created">Created</mat-option>
+            <mat-option value="-updated">Updated</mat-option>
+            <mat-option value="-rating">Rating</mat-option>
+            <mat-option value="metacritic">Metacritic</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+
+<app-game-list [games]=games></app-game-list>

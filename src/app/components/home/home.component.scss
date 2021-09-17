@@ -1,0 +1,85 @@
+.filters-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding-left: 20px;
+}
+
+::ng-deep {
+  .mat-form-field-infix {
+    background-color: #3f51b5;
+  }
+
+  .mat-select-value,
+  .mat-select-arrow,
+  .mat-form-field-hide-placeholder .mat-select-placeholder,
+  .mat-form-field-appearance-legacy .mat-form-field-label {
+    color: #fff !important;
+    opacity: 1;
+  }
+
+  .mat-form-field-infix {
+    border-color: #fff !important;
+    border-top: none;
+    padding-left: 5px !important;
+  }
+
+  .mat-form-field-appearance-legacy .mat-form-field-label {
+    padding-left: 5px;
+  }
+
+  .mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: #fff !important;
+  }
+}
+
+.game-form {
+  &-container {
+    display: flex;
+    justify-content: space-evenly;
+    color: #fff;
+  }
+
+  &-input-container {
+    input[type="text"],
+    input[type="number"] {
+      margin-left: 10px;
+      padding: 10px;
+      width: 300px;
+      border-radius: 5px;
+      outline: none;
+      border: none;
+    }
+  }
+}
+
+.add-new-button {
+  border: none;
+  outline: none;
+  background: #3f51b5;
+  padding: 10px;
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 700;
+  transition-duration: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    color: #3f51b5;
+    background-color: #fff;
+    border: 1px solid #3f51b5;
+  }
+}
+
+.invalid-button {
+  background: #a2a2a2;
+  &:hover {
+    color: #fff;
+    background-color: #a2a2a2;
+    border: none;
+  }
+}
+
+.invalid-input {
+  box-shadow: 1px 1px 20px 6px rgb(140 27 27);
+}
